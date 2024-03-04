@@ -1,0 +1,26 @@
+{
+	"user": "betojunior",
+	"repo": "San-Andreas-State",
+	"tag": "0.0.1",
+	"entry": "gamemodes/main.pwn",
+	"output": "gamemodes/main.amx",
+	"dependencies": [
+		"openmultiplayer/omp-stdlib",
+		"pawn-lang/samp-stdlib@open.mp",
+		"pawn-lang/pawn-stdlib@open.mp",
+
+		"pawn-lang/YSI-Includes",
+		"pBlueG/SA-MP-MySQL"
+	],
+	"runtime":
+	{
+		"version": "openmp"
+	},
+	"build":
+	{
+		"includes": [
+			"includes"
+		]
+	},
+	"local": true
+}
