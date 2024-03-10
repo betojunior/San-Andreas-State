@@ -93,7 +93,9 @@
     },
     "password": "",
     "pawn": {
-        "legacy_plugins": [],
+        "legacy_plugins": [
+            "mysql", "bcrypt-samp", "crashdetect"
+        ],
         "main_scripts": [
             "main"
         ],
