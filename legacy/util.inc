@@ -1,28 +1,37 @@
-#define     publicex%0(%1)      forward %0(%1);     public %0(%1)
 
-#define     COLOR_RED       "{FF0000}"
+#if defined _util_inc
+    #endinput
+#endif
+
+#define _util_inc
+
+// colors
+
 #define     COLOR_WHITE     "{FFFFFF}"
+#define     COLOR_RED       "{FF0000}"
 
-publicex KickEx(playerid)
+// functions
+
+stock void:CleanPlayerChat(playerid)
 {
-    Kick(playerid);
-    return 1;
+    for(new i = 0; i < 20; i++)
+    {
+        SendClientMessage(playerid, -1, " ");
+    }
 }
 
-KickWithDelay(playerid, time)
+stock void:CleanPlayerChatForAll()
 {
-    SetTimerEx("KickEx", time, false, "d", playerid);
-    return 1;
+    for(new i = 0; i < 20; i++)
+    {
+        SendClientMessageToAll(-1, " ");
+    }
 }
 
-SendErrorMessage(playerid, const message[])
+stock void:CleanServerTerminal()
 {
-    SendClientMessage(playerid, -1, ""COLOR_RED"ERRO: "COLOR_WHITE"%s", message);
-    return 1;
-}
-
-SendInfoMessage(playerid, const message[])
-{
-    SendClientMessage(playerid, -1, "INFO: %s", message);
-    return 1;
+    for(new i = 0; i < 20; i++)
+    {
+        print(" ");
+    }
 }
